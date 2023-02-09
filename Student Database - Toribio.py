@@ -16,7 +16,7 @@ def print_menu():
         """\n\t
         --------------- DATABASE LOGS ----------------
         \n\t\tWhat would you like to do?
-        1. Add Basic Information              [1]
+        1. Add Students Information           [1]
         2. Modify the Information             [2]
         3. Delete Data Information            [3]
         4. View the Entire List Information   [4]
@@ -469,4 +469,28 @@ while Count <= 1000:
                 print("\nSorry, But No Student Information found with the Contact number provided.")
         else:
             print("\nThe Student details does not exist.")
+        print_menu()
+
+    # Exit Program
+    elif Choice == "6":
+        print("\n>>>>>>>>>>> EXITING THE DATABASE LOGS OF THE STUDENT <<<<<<<<<<<")
+        print(
+            """\n
+            >>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            -----------------------------------------------------
+            ||      Thank you for using the Database logs      ||
+            ||                 of the Students                 ||
+            ||                                                 ||
+            ||            Goodbye! Have a Nice Day!            ||
+            ||                                                 ||
+            ||-------------------------------------------------||
+            ||~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~||
+            """
+        )
+        break
+
+    # Unknown Choice of Menu
+    else:
+        print("Sorry but", Choice, "is not a valid option. Try Again")
         print_menu()
