@@ -8,20 +8,24 @@ print("\n\t------------- HELLO WELCOME --------------"
       "\n\t======= Database Logs for Students =======")
 
 D = dict()
-n = int(input('\n\tNumber of students record you want to store?? '))
+n = int(input('\n\tNumber of students record you want to store? '))
 
-# Modification Menu Section
+# Start of Modification Menu Section
 def print_menu():
     print(
         """\n\t
-        --------------- DATABASE LOGS ----------------
-        \n\t\tWhat would you like to do?
-        1. Add Students Information           [1]
-        2. Modify the Information             [2]
-        3. Delete Data Information            [3]
-        4. View the Entire List Information   [4]
-        5. Search an Information              [5]
-        6. Exit                               [6]
+        --------------- DATABASE LOGS ---------------------
+        ===================================================
+        \n\t\t||What would you like to do?                      ||
+        ||                                                ||
+        ||  1. Add Students Information           [1]     ||
+        ||  2. Modify the Information             [2]     ||
+        ||  3. Delete Data Information            [3]     ||
+        ||  4. View the Entire Database           [4]     ||
+        ||  5. Search for Student Info            [5]     ||
+        ||  6. Exit                               [6]     ||
+        ||                                                ||
+        ||================================================||
         """
     )
 
@@ -31,11 +35,11 @@ print_menu()
 Entry_list = []
 Firstname_List = []
 Lastname_List = []
-StudentsAddress_List = []
 Marks_List = []
 Gender_List = []
 Religion_List = []
 Age_List = []
+StudentsAddress_List = []
 Phone_Number = []
 
 while Count <= 1000:
