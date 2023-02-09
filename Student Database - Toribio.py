@@ -25,6 +25,7 @@ def print_menu():
         """
     )
 
+# This is the List of the Code Containing where the data are stored
 Count = 0
 print_menu()
 Entry_list = []
@@ -33,9 +34,9 @@ Lastname_List = []
 StudentsAddress_List = []
 Marks_List = []
 Gender_List = []
-Phone_Number = []
 Religion_List = []
 Age_List = []
+Phone_Number = []
 
 while Count <= 1000:
     Choice = input("> What do you wanna do first: ")
@@ -49,10 +50,10 @@ while Count <= 1000:
         print("\n\tStudent Number:", Count)
         Firstname_List.append(input("\tEnter your First Name: "))
         Lastname_List.append(input("\tEnter your Last Name: "))
-        Marks_List.append(input("\tEnter your Mark: "))
+        Marks_List.append(input("\tEnter your Marks (GWA): "))
         Gender_List.append(input("\tEnter your Gender: "))
         Age_List.append(input("\tEnter your Age: "))
-        Religion_List.append(input("Enter your Religion: "))
+        Religion_List.append(input("\tEnter your Religion: "))
         StudentsAddress_List.append(input("\tEnter your Address Location: "))
         Phone_Number.append(input("\tEnter your Contact Number: "))
 
@@ -64,10 +65,10 @@ while Count <= 1000:
         print("\n>>>>>>>>>>> MODIFY INFORMATION <<<<<<<<<<<")
 
         for Contact in range(len(Entry_list)):
-            print("\nENTRY NUMBER", Entry_list[Contact])
+            print("\nSTUDENT NUMBER", Entry_list[Contact])
             print("First name:", Firstname_List[Contact])
             print("Last name:", Lastname_List[Contact])
-            print("Mark or Grade:", Marks_List[Contact])
+            print("Mark (GWA):", Marks_List[Contact])
             print("Gender:", Gender_List[Contact])
             print("Age:", Age_List[Contact])
             print("Religion:", Religion_List[Contact])
@@ -77,20 +78,20 @@ while Count <= 1000:
         Edit_Contact = int(input("\n> Enter the Students number that you want to edit: "))
         if Edit_Contact in Entry_list:
             index = Entry_list.index(Edit_Contact)
-            print("\nENTRY NUMBER", Edit_Contact)
+            print("\nSTUDENT NUMBER", Edit_Contact)
             print("First name: ", Firstname_List[index])
             print("Last name: ", Lastname_List[index])
-            print("Mark or Grade:", Marks_List[index])
+            print("Mark (GWA):", Marks_List[index])
             print("Gender:", Gender_List[index])
             print("Age:", Age_List[index])
             print("Religion:", Religion_List[index])
             print("Address: ", StudentsAddress_List[index])
             print("Contact number:", Phone_Number[index])
 
-            print("\nWhat number would you like to edit?")
+            print("\nWhat number would you like to Modify?")
             print("Enter (1) to Change the First name")
             print("Enter (2) to Change the Last name")
-            print("Enter (3) to Change the Mark or Grade")
+            print("Enter (3) to Change the Mark (GWA)")
             print("Enter (4) to Change the Gender")
             print("Enter (5) to Change the Age")
             print("Enter (6) to Change the Religion")
@@ -99,15 +100,15 @@ while Count <= 1000:
 
             Edit_choice = input("\t> What number do you want to modify: ")
 
-            # This section will change the First name of the contact
+            # This section will change the First name of the Student
             if Edit_choice == "1":
                 index = Entry_list.index(Edit_Contact)
                 Edit_First = input("Enter New First Name: ")
                 Firstname_List[index] = Edit_First
-                print("\nENTRY NUMBER:", Edit_Contact)
+                print("\nSTUDENT NUMBER:", Edit_Contact)
                 print("First name:", Firstname_List[index])
                 print("Last name:", Lastname_List[index])
-                print("Mark or Grade:", Marks_List[index])
+                print("Mark (GWA):", Marks_List[index])
                 print("Gender:", Gender_List[index])
                 print("Age:", Age_List[index])
                 print("Religion:", Religion_List[index])
@@ -115,15 +116,15 @@ while Count <= 1000:
                 print("Contact number:", Phone_Number[index])
                 print("\n<<<<< MODIFICATION COMPLETE >>>>>")
 
-            # This section will change the Last name of the contact
+            # This section will change the Last name of the Student
             elif Edit_choice == "2":
                 index = Entry_list.index(Edit_Contact)
                 Edit_Last = input("Enter New Last Name: ")
                 Lastname_List[index] = Edit_Last
-                print("\nENTRY NUMBER:", Edit_Contact)
+                print("\nSTUDENT NUMBER:", Edit_Contact)
                 print("First name:", Firstname_List[index])
                 print("Last name:", Lastname_List[index])
-                print("Mark or Grade:", Marks_List[index])
+                print("Mark (GWA):", Marks_List[index])
                 print("Gender:", Gender_List[index])
                 print("Age:", Age_List[index])
                 print("Religion:", Religion_List[index])
@@ -131,14 +132,15 @@ while Count <= 1000:
                 print("Contact number:", Phone_Number[index])
                 print("\n<<<<< MODIFICATION COMPLETE >>>>>")
 
+            # This section will change the Mark (GWA) of the Student
             elif Edit_choice == "3":
                 index = Entry_list.index(Edit_Contact)
-                Edit_Last = input("Enter New Mark or Grade: ")
-                Lastname_List[index] = Edit_Last
-                print("\nENTRY NUMBER:", Edit_Contact)
+                Edit_Marks = input("Enter New Mark (GWA): ")
+                Marks_List[index] = Edit_Marks
+                print("\nSTUDENT NUMBER:", Edit_Contact)
                 print("First name:", Firstname_List[index])
                 print("Last name:", Lastname_List[index])
-                print("Mark or Grade:", Marks_List[index])
+                print("Mark (GWA):", Marks_List[index])
                 print("Gender:", Gender_List[index])
                 print("Age:", Age_List[index])
                 print("Religion:", Religion_List[index])
@@ -146,26 +148,82 @@ while Count <= 1000:
                 print("Contact number:", Phone_Number[index])
                 print("\n<<<<< MODIFICATION COMPLETE >>>>>")
 
-            # This section will change the Address of the Contact
+            # This section will change the Gender of the Student
+            elif Edit_choice == "4":
+                index = Entry_list.index(Edit_Contact)
+                Edit_Gender = input("Enter New Gender: ")
+                Gender_List[index] = Edit_Gender
+                print("\nSTUDENT NUMBER:", Edit_Contact)
+                print("First name:", Firstname_List[index])
+                print("Last name:", Lastname_List[index])
+                print("Mark (GWA):", Marks_List[index])
+                print("Gender:", Gender_List[index])
+                print("Age:", Age_List[index])
+                print("Religion:", Religion_List[index])
+                print("Address:", StudentsAddress_List[index])
+                print("Contact number:", Phone_Number[index])
+                print("\n<<<<< MODIFICATION COMPLETE >>>>>")
+
+            # This section will change the Age of the Student
+            elif Edit_choice == "5":
+                index = Entry_list.index(Edit_Contact)
+                Edit_Age = input("Enter New Age: ")
+                Age_List[index] = Edit_Age
+                print("\nSTUDENT NUMBER:", Edit_Contact)
+                print("First name:", Firstname_List[index])
+                print("Last name:", Lastname_List[index])
+                print("Mark (GWA):", Marks_List[index])
+                print("Gender:", Gender_List[index])
+                print("Age:", Age_List[index])
+                print("Religion:", Religion_List[index])
+                print("Address:", StudentsAddress_List[index])
+                print("Contact number:", Phone_Number[index])
+                print("\n<<<<< MODIFICATION COMPLETE >>>>>")
+
+            # This section will change the Religion of the Student
+            elif Edit_choice == "6":
+                index = Entry_list.index(Edit_Contact)
+                Edit_Religion = input("Enter New Religion: ")
+                Religion_List[index] = Edit_Religion
+                print("\nSTUDENT NUMBER:", Edit_Contact)
+                print("First name:", Firstname_List[index])
+                print("Last name:", Lastname_List[index])
+                print("Mark (GWA):", Marks_List[index])
+                print("Gender:", Gender_List[index])
+                print("Age:", Age_List[index])
+                print("Religion:", Religion_List[index])
+                print("Address:", StudentsAddress_List[index])
+                print("Contact number:", Phone_Number[index])
+                print("\n<<<<< MODIFICATION COMPLETE >>>>>")
+
+            # This section will change the Address of the Student
             elif Edit_choice == "7":
                 index = Entry_list.index(Edit_Contact)
                 Edit_address = input("Enter New Address: ")
-                UsersAddress_List[index] = Edit_address
-                print("\nENTRY NUMBER:", Edit_Contact)
+                StudentsAddress_List[index] = Edit_address
+                print("\nSTUDENT NUMBER:", Edit_Contact)
                 print("First name:", Firstname_List[index])
                 print("Last name:", Lastname_List[index])
+                print("Mark (GWA):", Marks_List[index])
+                print("Gender:", Gender_List[index])
+                print("Age:", Age_List[index])
+                print("Religion:", Religion_List[index])
                 print("Address:", StudentsAddress_List[index])
                 print("Contact number:", Phone_Number[index])
                 print("\n<<<<< MODIFICATION COMPLETE >>>>>")
 
-            # This section will change the Phone Number of the Contact
+            # This section will change the Phone Number of the Student
             elif Edit_choice == "8":
                 index = Entry_list.index(Edit_Contact)
                 Edit_Phone_number = input("Enter New Phone number: ")
                 Phone_Number[index] = Edit_Phone_number
-                print("\nENTRY NUMBER:", Edit_Contact)
+                print("\nSTUDENT NUMBER:", Edit_Contact)
                 print("First name:", Firstname_List[index])
                 print("Last name:", Lastname_List[index])
+                print("Mark (GWA):", Marks_List[index])
+                print("Gender:", Gender_List[index])
+                print("Age:", Age_List[index])
+                print("Religion:", Religion_List[index])
                 print("Address:", StudentsAddress_List[index])
                 print("Contact number:", Phone_Number[index])
                 print("\n<<<<< MODIFICATION COMPLETE >>>>>")
