@@ -233,7 +233,7 @@ while Count <= 1000:
             print("The Student Number does not exist!")
         print_menu()
 
-    # The Delete Contact Section:
+    # Delete Database:
     elif Choice == "3":
         print("\n>>>>>>>>>>> DELETE DATA INFORMATION <<<<<<<<<<<")
 
@@ -244,10 +244,10 @@ while Count <= 1000:
             Entry_list.pop()
             print("First name:", Firstname_List.pop(index))
             print("Last name:", Lastname_List.pop(index))
-            print("Mark (GWA):", Marks_List.pop[index])
-            print("Gender:", Gender_List.pop[index])
-            print("Age:", Age_List.pop[index])
-            print("Religion:", Religion_List.pop[index])
+            print("Mark (GWA):", Marks_List.pop(index))
+            print("Gender:", Gender_List.pop(index))
+            print("Age:", Age_List.pop(index))
+            print("Religion:", Religion_List.pop(index))
             print("Address:", StudentsAddress_List.pop(index))
             print("Contact number:", Phone_Number.pop(index))
             print("\n<<<<< This Student Number Data has been Deleted >>>>>")
