@@ -15,7 +15,7 @@ def print_menu():
     print(
         """\n\t
         --------------- DATABASE LOGS ----------------
-        \n\tWhat would you like to do?
+        \n\t\tWhat would you like to do?
         1. Add Basic Information              [1]
         2. Modify the Information             [2]
         3. Delete Data Information            [3]
@@ -31,9 +31,33 @@ Entry_list = []
 Firstname_List = []
 Lastname_List = []
 StudentsAddress_List = []
+Marks_List = []
+Gender_List = []
 Phone_Number = []
+Religion_List = []
+Age_List = []
 
+while Count <= 1000:
+    Choice = input("> What do you wanna do first: ")
 
+    # Add Students Information
+    if Choice == "1":
+        print("\n>>>>>>>>>>> ADD STUDENT BASIC INFORMATION <<<<<<<<<<<")
+
+        Count = Count + 1
+        Entry_list.append(Count)
+        print("\n\tStudent Number:", Count)
+        Firstname_List.append(input("\tEnter your First Name: "))
+        Lastname_List.append(input("\tEnter your Last Name: "))
+        Marks_List.append(input("\tEnter your Mark: "))
+        Gender_List.append(input("\tEnter your Gender: "))
+        Age_List.append(input("\tEnter your Age: "))
+        Religion_List.append(input("Enter your Religion: "))
+        StudentsAddress_List.append(input("\tEnter your Address Location: "))
+        Phone_Number.append(input("\tEnter your Contact Number: "))
+
+        print("\n\tYou have Successfully added a new Entry of contact.")
+        print_menu()
 
 # Add student information to the dictionary
 for i in range(0, n):
