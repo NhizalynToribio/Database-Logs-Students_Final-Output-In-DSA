@@ -5,7 +5,7 @@ print("************* FINAL OUTPUT IN DSA **************")
 
 
 print("\n\t------------- HELLO WELCOME --------------"
-      "\n\t========= Students Database Logs =========")
+      "\n\t======= Database Logs for Students =======")
 
 D = dict()
 n = int(input('\n\tNumber of students record you want to store?? '))
@@ -228,9 +228,31 @@ while Count <= 1000:
                 print("Contact number:", Phone_Number[index])
                 print("\n<<<<< MODIFICATION COMPLETE >>>>>")
             else:
-                print("The entry does not exist!")
+                print("The Student Number does not exist!")
         else:
-            print("The entry does not exist!")
+            print("The Student Number does not exist!")
         print_menu()
 
+    # The Delete Contact Section:
+    elif Choice == "3":
+        print("\n>>>>>>>>>>> DELETE DATA INFORMATION <<<<<<<<<<<")
 
+        Entry_Number = int(input("\nEnter the Student Number that you want to delete in the Database: "))
+        if Entry_Number in Entry_list:
+            index = Entry_list.index(Entry_Number)
+            print("\nThe Student number", Entry_Number)
+            Entry_list.pop()
+            print("First name:", Firstname_List.pop(index))
+            print("Last name:", Lastname_List.pop(index))
+            print("Mark (GWA):", Marks_List.pop[index])
+            print("Gender:", Gender_List.pop[index])
+            print("Age:", Age_List.pop[index])
+            print("Religion:", Religion_List.pop[index])
+            print("Address:", StudentsAddress_List.pop(index))
+            print("Contact number:", Phone_Number.pop(index))
+            print("\n<<<<< This Student Number Data has been Deleted >>>>>")
+            print("<<<<<<<<<<< DELETE COMPLETE >>>>>>>>>>>>")
+            Count -= 1
+        else:
+            print("\nThe Student number does not exist.")
+        print_menu()
