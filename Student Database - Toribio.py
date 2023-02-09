@@ -60,7 +60,7 @@ while Count <= 1000:
         print("\n\tYou have Successfully added a new Student Information.")
         print_menu()
 
-    # The Edit Contact Section
+    # Modifying Database Section
     elif Choice == "2":
         print("\n>>>>>>>>>>> MODIFY INFORMATION <<<<<<<<<<<")
 
@@ -233,7 +233,7 @@ while Count <= 1000:
             print("The Student Number does not exist!")
         print_menu()
 
-    # Delete Database:
+    # Deleting Database:
     elif Choice == "3":
         print("\n>>>>>>>>>>> DELETE DATA INFORMATION <<<<<<<<<<<")
 
@@ -255,4 +255,22 @@ while Count <= 1000:
             Count -= 1
         else:
             print("\nThe Student number does not exist.")
+        print_menu()
+
+    # Viewing Database Logs
+    elif Choice == "4":
+        print("\n>>>>>>>>>>> VIEWING DATABASE INFORMATION <<<<<<<<<<<")
+
+        for Contact in range(len(Entry_list)):
+            print("\nSTUDENT NUMBER", Entry_list[Contact])
+            print("First name:", Firstname_List[Contact])
+            print("Last name:", Lastname_List[Contact])
+            print("Mark (GWA):", Marks_List[Contact])
+            print("Gender:", Gender_List[Contact])
+            print("Age:", Age_List[Contact])
+            print("Religion:", Religion_List[Contact])
+            print("Address:", StudentsAddress_List[Contact])
+            print("Contact number:", Phone_Number[Contact])
+
+        print("\nThe Status of the Students Database is:", Count)
         print_menu()
