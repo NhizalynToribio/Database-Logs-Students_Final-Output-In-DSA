@@ -4,14 +4,38 @@ print("***************** BSCOE 1 -2 *******************")
 print("************* FINAL OUTPUT IN DSA **************")
 
 
-print("-----Program for Student Information-----")
+print("\n\t------------- HELLO WELCOME --------------"
+      "\n\t========= Students Database Logs =========")
 
 D = dict()
+n = int(input('\n\tNumber of students record you want to store?? '))
 
-n = int(input('How many student record you want to store?? '))
+# Modification Menu Section
+def print_menu():
+    print(
+        """\n\t
+        --------------- DATABASE LOGS ----------------
+        \n\tWhat would you like to do?
+        1. Add Basic Information              [1]
+        2. Modify the Information             [2]
+        3. Delete Data Information            [3]
+        4. View the Entire List Information   [4]
+        5. Search an Information              [5]
+        6. Exit                               [6]
+        """
+    )
 
-# Add student information
-# to the dictionary
+Count = 0
+print_menu()
+Entry_list = []
+Firstname_List = []
+Lastname_List = []
+StudentsAddress_List = []
+Phone_Number = []
+
+
+
+# Add student information to the dictionary
 for i in range(0, n):
     x, y = input("Enter the complete name (First and last name) of student: ").split()
     z = input("Enter contact number: ")
