@@ -56,115 +56,123 @@ while Count <= 1000:
         StudentsAddress_List.append(input("\tEnter your Address Location: "))
         Phone_Number.append(input("\tEnter your Contact Number: "))
 
-        print("\n\tYou have Successfully added a new Entry of contact.")
+        print("\n\tYou have Successfully added a new Student Information.")
         print_menu()
 
-# Add student information to the dictionary
-for i in range(0, n):
-    x, y = input("Enter the complete name (First and last name) of student: ").split()
-    z = input("Enter contact number: ")
-    m = input('Enter Marks: ')
-    D[x, y] = (z, m)
+    # The Edit Contact Section
+    elif Choice == "2":
+        print("\n>>>>>>>>>>> MODIFY INFORMATION <<<<<<<<<<<")
+
+        for Contact in range(len(Entry_list)):
+            print("\nENTRY NUMBER", Entry_list[Contact])
+            print("First name:", Firstname_List[Contact])
+            print("Last name:", Lastname_List[Contact])
+            print("Mark or Grade:", Marks_List[Contact])
+            print("Gender:", Gender_List[Contact])
+            print("Age:", Age_List[Contact])
+            print("Religion:", Religion_List[Contact])
+            print("Address:", StudentsAddress_List[Contact])
+            print("Contact number:", Phone_Number[Contact])
+
+        Edit_Contact = int(input("\n> Enter the Students number that you want to edit: "))
+        if Edit_Contact in Entry_list:
+            index = Entry_list.index(Edit_Contact)
+            print("\nENTRY NUMBER", Edit_Contact)
+            print("First name: ", Firstname_List[index])
+            print("Last name: ", Lastname_List[index])
+            print("Mark or Grade:", Marks_List[index])
+            print("Gender:", Gender_List[index])
+            print("Age:", Age_List[index])
+            print("Religion:", Religion_List[index])
+            print("Address: ", StudentsAddress_List[index])
+            print("Contact number:", Phone_Number[index])
+
+            print("\nWhat number would you like to edit?")
+            print("Enter (1) to Change the First name")
+            print("Enter (2) to Change the Last name")
+            print("Enter (3) to Change the Mark or Grade")
+            print("Enter (4) to Change the Gender")
+            print("Enter (5) to Change the Age")
+            print("Enter (6) to Change the Religion")
+            print("Enter (7) to Change the Address")
+            print("Enter (8) to Change the Contact number\n")
+
+            Edit_choice = input("\t> What number do you want to modify: ")
+
+            # This section will change the First name of the contact
+            if Edit_choice == "1":
+                index = Entry_list.index(Edit_Contact)
+                Edit_First = input("Enter New First Name: ")
+                Firstname_List[index] = Edit_First
+                print("\nENTRY NUMBER:", Edit_Contact)
+                print("First name:", Firstname_List[index])
+                print("Last name:", Lastname_List[index])
+                print("Mark or Grade:", Marks_List[index])
+                print("Gender:", Gender_List[index])
+                print("Age:", Age_List[index])
+                print("Religion:", Religion_List[index])
+                print("Address:", StudentsAddress_List[index])
+                print("Contact number:", Phone_Number[index])
+                print("\n<<<<< MODIFICATION COMPLETE >>>>>")
+
+            # This section will change the Last name of the contact
+            elif Edit_choice == "2":
+                index = Entry_list.index(Edit_Contact)
+                Edit_Last = input("Enter New Last Name: ")
+                Lastname_List[index] = Edit_Last
+                print("\nENTRY NUMBER:", Edit_Contact)
+                print("First name:", Firstname_List[index])
+                print("Last name:", Lastname_List[index])
+                print("Mark or Grade:", Marks_List[index])
+                print("Gender:", Gender_List[index])
+                print("Age:", Age_List[index])
+                print("Religion:", Religion_List[index])
+                print("Address:", StudentsAddress_List[index])
+                print("Contact number:", Phone_Number[index])
+                print("\n<<<<< MODIFICATION COMPLETE >>>>>")
+
+            elif Edit_choice == "3":
+                index = Entry_list.index(Edit_Contact)
+                Edit_Last = input("Enter New Mark or Grade: ")
+                Lastname_List[index] = Edit_Last
+                print("\nENTRY NUMBER:", Edit_Contact)
+                print("First name:", Firstname_List[index])
+                print("Last name:", Lastname_List[index])
+                print("Mark or Grade:", Marks_List[index])
+                print("Gender:", Gender_List[index])
+                print("Age:", Age_List[index])
+                print("Religion:", Religion_List[index])
+                print("Address:", StudentsAddress_List[index])
+                print("Contact number:", Phone_Number[index])
+                print("\n<<<<< MODIFICATION COMPLETE >>>>>")
+
+            # This section will change the Address of the Contact
+            elif Edit_choice == "7":
+                index = Entry_list.index(Edit_Contact)
+                Edit_address = input("Enter New Address: ")
+                UsersAddress_List[index] = Edit_address
+                print("\nENTRY NUMBER:", Edit_Contact)
+                print("First name:", Firstname_List[index])
+                print("Last name:", Lastname_List[index])
+                print("Address:", StudentsAddress_List[index])
+                print("Contact number:", Phone_Number[index])
+                print("\n<<<<< MODIFICATION COMPLETE >>>>>")
+
+            # This section will change the Phone Number of the Contact
+            elif Edit_choice == "8":
+                index = Entry_list.index(Edit_Contact)
+                Edit_Phone_number = input("Enter New Phone number: ")
+                Phone_Number[index] = Edit_Phone_number
+                print("\nENTRY NUMBER:", Edit_Contact)
+                print("First name:", Firstname_List[index])
+                print("Last name:", Lastname_List[index])
+                print("Address:", StudentsAddress_List[index])
+                print("Contact number:", Phone_Number[index])
+                print("\n<<<<< MODIFICATION COMPLETE >>>>>")
+            else:
+                print("The entry does not exist!")
+        else:
+            print("The entry does not exist!")
+        print_menu()
 
 
-# define a function for shorting
-# names based on first name
-def sort():
-    ls = list()
-    # fetch key and value using
-    # items() method
-    for sname, details in D.items():
-        # store key parts as an tuple
-        tup = (sname[0], sname[1])
-
-        # add tuple to the list
-        ls.append(tup)
-
-        # sort the final list of tuples
-    ls = sorted(ls)
-    for i in ls:
-        # print first name and second name
-        print(i[0], i[1])
-    return
-
-
-# define a function for
-# finding the minimum marks
-# in stored data
-def minmarks():
-    ls = list()
-    # fetch key and value using
-    # items() methods
-    for sname, details in D.items():
-        # add details second element
-        # (marks) to the list
-        ls.append(details[1])
-
-        # sort the list elements
-    ls = sorted(ls)
-    print("Minimum marks: ", min(ls))
-
-    return
-
-
-# define a function for searching
-# student contact number
-def searchdetail(fname):
-    ls = list()
-
-    for sname, details in D.items():
-        tup = (sname, details)
-        ls.append(tup)
-
-    for i in ls:
-        if i[0][0] == fname:
-            print(i[1][0])
-    return
-
-
-# define a function for
-# asking the options
-def option():
-    choice = int(input('Enter the operation detail: \n \
-    1: Sorting using first name \n \
-    2: Finding Minimum marks \n \
-    3: Search contact number using first name: \n \
-    4: Exit\n \
-    Option: '))
-
-    if choice == 1:
-        # function call
-        sort()
-        print('Want to perform some other operation??? Y or N: ')
-        inp = input()
-        if inp == 'Y':
-            option()
-
-        # exit function call
-        exit()
-
-    elif choice == 2:
-        minmarks()
-        print('Want to perform some other operation??? Y or N: ')
-
-        inp = input()
-        if inp == 'Y':
-            option()
-        exit()
-
-    elif choice == 3:
-        first = input('Enter first name of student: ')
-        searchdetail(first)
-
-        print('Want to perform some other operation??? Y or N: ')
-        inp = input()
-        if inp == 'Y':
-            option()
-
-        exit()
-    else:
-        print('Thanks for executing me!!!!')
-        exit()
-
-
-option()
