@@ -274,3 +274,199 @@ while Count <= 1000:
 
         print("\nThe Status of the Students Database is:", Count)
         print_menu()
+
+    #Search Student Data Information
+    elif Choice == "5":
+        print("\n>>>>>>>>>>> SEARCH STUDENT INFORMATION <<<<<<<<<<<")
+
+        print("\nEnter (a) to search the student database using the First name of the Student")
+        print("Enter (b) to search the student database using the Last name of the Student")
+        print("Enter (c) to search the student database using the Mark (GWA) of the Student")
+        print("Enter (d) to search the student database using the Gender of the Student")
+        print("Enter (e) to search the student database using the Age of the Student")
+        print("Enter (f) to search the student database using the Religion of the Student")
+        print("Enter (g) to search the student database using the Address of the Student")
+        print("Enter (h) to search the student database using the Contact Number of the Student")
+
+        Search_choice = input("\n> Please Enter your choice (a-h): ")
+
+        # Searching Database using the First Name of the Student
+        if Search_choice.casefold() == "a":
+            Search_Firstname = input("Enter the First name of the Student to be Search in the Database: ")
+            rep = []
+            print("\nFOUND RESULTS:")
+
+            for Contact in range(len(Firstname_List)):
+                if Search_Firstname in Firstname_List[Contact]:
+                    index = int(Firstname_List.index(Search_Firstname))
+                    rep.append(index)
+                    print("\nSTUDENT NUMBER", Entry_list[Contact])
+                    print("First name:", Firstname_List[Contact])
+                    print("Last name:", Lastname_List[Contact])
+                    print("Mark (GWA):", Marks_List[Contact])
+                    print("Gender:", Gender_List[Contact])
+                    print("Age:", Age_List[Contact])
+                    print("Religion:", Religion_List[Contact])
+                    print("Address:", StudentsAddress_List[Contact])
+                    print("Contact number:", Phone_Number[Contact])
+            if Search_Firstname not in Firstname_List:
+                print("\nSorry, But No Student Information found with the First name provided.")
+
+        # Searching Database using the Last Name of the Student
+        elif Search_choice.casefold() == "b":
+            Search_Lastname = input("Enter the Last name of the Student to be Search in the Database: ")
+            rep = []
+            print("\nFOUND RESULTS")
+
+            for Contact in range(len(Lastname_List)):
+                if Search_Lastname in Lastname_List[Contact]:
+                    index = int(Lastname_List.index(Search_Lastname))
+                    rep.append(index)
+                    print("\nSTUDENT NUMBER", Entry_list[Contact])
+                    print("First name:", Firstname_List[Contact])
+                    print("Last name:", Lastname_List[Contact])
+                    print("Mark (GWA):", Marks_List[Contact])
+                    print("Gender:", Gender_List[Contact])
+                    print("Age:", Age_List[Contact])
+                    print("Religion:", Religion_List[Contact])
+                    print("Address:", StudentsAddress_List[Contact])
+                    print("Contact number:", Phone_Number[Contact])
+            if Search_Lastname not in Lastname_List:
+                print("\nSorry, But No Student Information found with the Last name provided.")
+
+        # Searching Database using the Mark (GWA) of the Student
+        elif Search_choice.casefold() == "c":
+            Search_Marks = input("Enter the Mark (GWA) of the Student to be Search in the Database: ")
+            rep = []
+            print("\nFOUND RESULTS")
+
+            for Contact in range(len(Marks_List)):
+                if Search_Marks in Marks_List[Contact]:
+                    index = int(Marks_List.index(Search_Marks))
+                    rep.append(index)
+                    print("\nSTUDENT NUMBER", Entry_list[Contact])
+                    print("First name:", Firstname_List[Contact])
+                    print("Last name:", Lastname_List[Contact])
+                    print("Mark (GWA):", Marks_List[Contact])
+                    print("Gender:", Gender_List[Contact])
+                    print("Age:", Age_List[Contact])
+                    print("Religion:", Religion_List[Contact])
+                    print("Address:", StudentsAddress_List[Contact])
+                    print("Contact number:", Phone_Number[Contact])
+            if Search_Marks not in Marks_List:
+                print("\nSorry, But No Student Information found with the Marks (GWA) provided.")
+
+        # Searching Database using the Gender of the Student
+        elif Search_choice.casefold() == "d":
+            Search_Gender = input("Enter the Gender of the Student to be Search in the Database: ")
+            rep = []
+            print("\nFOUND RESULTS")
+
+            for Contact in range(len(Gender_List)):
+                if Search_Gender in Gender_List[Contact]:
+                    index = int(Gender_List.index(Search_Gender))
+                    rep.append(index)
+                    print("\nSTUDENT NUMBER", Entry_list[Contact])
+                    print("First name:", Firstname_List[Contact])
+                    print("Last name:", Lastname_List[Contact])
+                    print("Mark (GWA):", Marks_List[Contact])
+                    print("Gender:", Gender_List[Contact])
+                    print("Age:", Age_List[Contact])
+                    print("Religion:", Religion_List[Contact])
+                    print("Address:", StudentsAddress_List[Contact])
+                    print("Contact number:", Phone_Number[Contact])
+            if Search_Gender not in Gender_List:
+                print("\nSorry, But No Student Information found with the Gender provided.")
+
+        # Searching Database using the Age of the Student
+        elif Search_choice.casefold() == "e":
+            Search_Age = input("Enter the Age of the Student to be Search in the Database: ")
+            rep = []
+            print("\nFOUND RESULTS")
+
+            for Contact in range(len(Age_List)):
+                if Search_Age in Age_List[Contact]:
+                    index = int(Age_List.index(Search_Age))
+                    rep.append(index)
+                    print("\nSTUDENT NUMBER", Entry_list[Contact])
+                    print("First name:", Firstname_List[Contact])
+                    print("Last name:", Lastname_List[Contact])
+                    print("Mark (GWA):", Marks_List[Contact])
+                    print("Gender:", Gender_List[Contact])
+                    print("Age:", Age_List[Contact])
+                    print("Religion:", Religion_List[Contact])
+                    print("Address:", StudentsAddress_List[Contact])
+                    print("Contact number:", Phone_Number[Contact])
+            if Search_Age not in Age_List:
+                print("\nSorry, But No Student Information found with the Age provided.")
+
+        # Searching Database using the Religion of the Student
+        elif Search_choice.casefold() == "f":
+            Search_Religion = input("Enter the Religion of the Student to be Search in the Database: ")
+            rep = []
+            print("\nFOUND RESULTS")
+
+            for Contact in range(len(Religion_List)):
+                if Search_Religion in Religion_List[Contact]:
+                    index = int(Religion_List.index(Search_Religion))
+                    rep.append(index)
+                    print("\nSTUDENT NUMBER", Entry_list[Contact])
+                    print("First name:", Firstname_List[Contact])
+                    print("Last name:", Lastname_List[Contact])
+                    print("Mark (GWA):", Marks_List[Contact])
+                    print("Gender:", Gender_List[Contact])
+                    print("Age:", Age_List[Contact])
+                    print("Religion:", Religion_List[Contact])
+                    print("Address:", StudentsAddress_List[Contact])
+                    print("Contact number:", Phone_Number[Contact])
+            if Search_Religion not in Religion_List:
+                print("\nSorry, But No Student Information found with the Religion provided.")
+
+        # Searching Database using the Address of the Student
+        elif Search_choice.casefold() == "g":
+            Search_Address = input("Enter the Address of the Student to be Search in the Database: ")
+            rep = []
+            print("\nFOUND RESULTS")
+
+            for Contact in range(len(StudentsAddress_List)):
+                if Search_Address in StudentsAddress_List[Contact]:
+                    index = int(StudentsAddress_List.index(Search_Address))
+                    rep.append(index)
+                    print("\nSTUDENT NUMBER", Entry_list[Contact])
+                    print("First name:", Firstname_List[Contact])
+                    print("Last name:", Lastname_List[Contact])
+                    print("Mark (GWA):", Marks_List[Contact])
+                    print("Gender:", Gender_List[Contact])
+                    print("Age:", Age_List[Contact])
+                    print("Religion:", Religion_List[Contact])
+                    print("Address:", StudentsAddress_List[Contact])
+                    print("Contact number:", Phone_Number[Contact])
+            if Search_Address not in StudentsAddress_List:
+                print("\nSorry, But No Student Information found with the Address name provided.")
+
+        # Searching Database using the Phone Number of the Student
+        elif Search_choice.casefold() == "h":
+            Search_PhoneNumber = input("Enter the Contact Number of the student to be Search in the Database: ")
+            rep = []
+            cnt = 0
+            print("\nFOUND RESULTS")
+
+            for Contact in range(len(Phone_Number)):
+                if Search_PhoneNumber in Phone_Number[Contact]:
+                    index = int(Phone_Number.index(Search_PhoneNumber))
+                    rep.append(index)
+                    cnt += 1
+                    print("\nSTUDENT NUMBER", Entry_list[Contact])
+                    print("First name:", Firstname_List[Contact])
+                    print("Last name:", Lastname_List[Contact])
+                    print("Mark (GWA):", Marks_List[Contact])
+                    print("Gender:", Gender_List[Contact])
+                    print("Age:", Age_List[Contact])
+                    print("Religion:", Religion_List[Contact])
+                    print("Address:", StudentsAddress_List[Contact])
+                    print("Contact number:", Phone_Number[Contact])
+            if Search_PhoneNumber not in Phone_Number:
+                print("\nSorry, But No Student Information found with the Contact number provided.")
+        else:
+            print("\nThe Student details does not exist.")
+        print_menu()
