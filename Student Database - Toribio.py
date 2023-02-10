@@ -10,11 +10,12 @@ print("\n\t------------- HELLO WELCOME --------------"
 D = dict()
 n = int(input('\n\tNumber of students record you want to store? '))
 
+
 # Start of Modification Menu Section
 def print_menu():
     print(
         """\n\t
-        --------------- DATABASE LOGS ---------------------
+        ------------------- DATABASE LOGS -----------------
         ===================================================
         \n\t\t||What would you like to do?                      ||
         ||                                                ||
@@ -475,9 +476,10 @@ while Count <= 1000:
             print("\nThe Student details does not exist.")
         print_menu()
 
+
     # Exit Program
     elif Choice == "6":
-        print("\n>>>>>>>>>>> EXITING THE DATABASE LOGS OF THE STUDENT <<<<<<<<<<<")
+        print("\n\t>>>>>>>>>>> EXITING THE DATABASE LOGS OF THE STUDENT <<<<<<<<<<<")
         print(
             """\n
             >>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -496,5 +498,5 @@ while Count <= 1000:
 
     # Unknown Choice of Menu
     else:
-        print("Sorry but", Choice, "is not a valid option. Try Again")
+        print("\nSorry but", Choice, "is not a valid option. Try Again")
         print_menu()
