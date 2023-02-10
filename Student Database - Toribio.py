@@ -1,7 +1,8 @@
 print("**************** PROGRAMMED BY: *****************")
 print("************** NHIZALYN TORIBIO ****************")
-print("***************** BSCOE 1 -2 *******************")
+print("***************** BSCOE 2 -2 *******************")
 print("************* FINAL OUTPUT IN DSA **************")
+print("*********** Mr. Danilo Madrigalejos ************")
 
 
 print("\n\t------------- HELLO WELCOME --------------"
